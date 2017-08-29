@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    font-family: 'Open Sans', 'sans-serif';
+    font-family: 'Proxima Nova', 'sans-serif';
     background-color: #fff;
     color: #444;
 }
@@ -21,6 +21,8 @@ body {
 
     .header {
         grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .content {
@@ -44,8 +46,10 @@ body {
 }
 
 .header {
-    background-color: darkgreen;
-    text-align: center;
+    background-color: lightskyblue;
+    background-image: url('./jumbotron.jpg');
+    background-blend-mode: multiply;
+    background-position: top center;
 }
 
 .content {
@@ -71,6 +75,15 @@ body {
     grid-row: auto;
 }
 
+.contact-me {
+    justify-self: end;
+    text-align: right;
+}
+
+p {
+    margin: 0;
+}
+
 /* INPUTS */
 
 input {
@@ -84,6 +97,7 @@ input {
     padding-left: 1.25em;
     width: 100%;
     box-sizing: border-box;
+    font-family: 'Proxima Nova', 'sans-serif';
 }
 
 input:focus {
@@ -128,4 +142,5 @@ button {
     align-self: end;
     cursor: pointer;
     box-shadow: 1px 3px 5px #333;
+    font-family: 'Proxima Nova', 'sans-serif';
 }
