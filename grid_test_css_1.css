@@ -1,0 +1,130 @@
+body {
+    margin: 0px;
+    font-family: 'Open Sans', 'sans-serif';
+    background-color: #fff;
+    color: #444;
+}
+
+.container {
+    display: grid;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        display: grid;
+        grid-template-columns: [col] minmax(325px, 1fr) repeat(2, [col] minmax(200px, 1fr));
+        grid-template-areas: 
+            "header  header  header "
+            "sidebar content content"
+            "footer  footer  footer ";
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
+
+.container > * {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    font-size: 150%;
+}
+
+.header {
+    background-color: darkgreen;
+}
+
+.content {
+    background-color: darkred;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.sidebar {
+    background-color: darkblue;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 2em 2em minmax(2em, auto) 2em;
+}
+
+.card {
+    background-color: #9e9e9e;
+    border-radius: 5px;
+}
+
+.empty-space {
+    grid-row: auto;
+}
+
+/* INPUTS */
+
+input {
+    border: none;
+    background: rgba(0,0,0,0);
+    color: #fff;
+    font-size: 2em;
+    background-repeat: no-repeat;
+    background-size: 0.95em;
+    background-position: 0.05em;
+    padding-left: 1.25em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+}
+
+.first-name {
+    background-image: url('./person.png');
+}
+
+.phone-number {
+    background-image: url('./phone.png');
+}
+
+/* Change Placeholder text color */
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #9e9e9e;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #9e9e9e;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #9e9e9e;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #9e9e9e;
+  opacity: 1;
+}
+
+/* BUTTONS */
+button {
+    background-color: #9e9e9e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.75em;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    align-self: end;
+    cursor: pointer;
+    box-shadow: 1px 3px 5px #333;
+}
