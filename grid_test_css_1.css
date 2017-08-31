@@ -36,6 +36,10 @@ body {
     .footer {
         grid-area: footer;
     }
+
+    .banner {
+        padding-left: 3em;
+    }
 }
 
 .container > * {
@@ -46,17 +50,30 @@ body {
 }
 
 .header {
-    background-color: lightskyblue;
+    background-color: lightsteelblue;
     background-image: url('./jumbotron.jpg');
     background-blend-mode: multiply;
     background-position: top center;
+    background-attachment: fixed;
 }
 
 .content {
-    background-color: darkred;
+    background-color: red;
+    background-image: url('./scroll_test.jpg');
+    background-blend-mode: multiply;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    height: 1000px;
+}
+
+.scrolled {
+    background-color: transparent;
+    filter: grayscale(100%);
 }
 
 .sidebar {
@@ -82,6 +99,25 @@ body {
 
 p {
     margin: 0;
+}
+
+a {
+    color: lightsteelblue;
+}
+
+a:hover {
+    color: white;
+}
+
+a:visited {
+    color: steelblue;
+}
+
+.footer {
+    background-image: url('./footer.jpg');
+    background-position: top center;
+    background-attachment: fixed;
+    height: 150px;;
 }
 
 /* INPUTS */
